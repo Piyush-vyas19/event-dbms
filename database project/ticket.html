@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Input Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Ticket Details</h2>
+    <form>
+      <div class="form-group">
+        <label for="ticketDescription">Ticket Description:</label>
+        <input type="text" id="ticketDescription" name="ticketDescription" required>
+      </div>
+      <div class="form-group">
+        <label for="eventID">Event ID:</label>
+        <input type="text" id="eventID" name="eventID" required>
+      </div>
+      <div class="form-group">
+        <label for="ticketSaleStartDate">Ticket Sale Start Date:</label>
+        <input type="datetime-local" id="ticketSaleStartDate" name="ticketSaleStartDate" required>
+      </div>
+      <div class="form-group">
+        <label for="ticketSaleEndDate">Ticket Sale End Date:</label>
+        <input type="datetime-local" id="ticketSaleEndDate" name="ticketSaleEndDate" required>
+      </div>
+      <div class="form-group">
+        <label for="ticketPrice">Ticket Price:</label>
+        <input type="number" id="ticketPrice" name="ticketPrice" required>
+      </div>
+      <div class="form-group">
+        <label for="availableTickets">Number of Available Tickets:</label>
+        <input type="number" id="availableTickets" name="availableTickets" required>
+      </div>
+      <div class="form-group">
+        <label for="ticketID">Ticket ID:</label>
+        <input type="text" id="ticketID" name="ticketID" required>
+      </div>
+      <div class="form-group">
+        <label for="ticketType">Type of Ticket:</label>
+        <select id="ticketType" name="ticketType" required>
+          <option value="">Select ticket type...</option>
+          <option value="Regular">Regular</option>
+          <option value="VIP">VIP</option>
+          <option value="Premium">Premium</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

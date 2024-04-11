@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Input Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Event Details</h2>
+    <form>
+      <div class="form-group">
+        <label for="eventName">Event Name:</label>
+        <input type="text" id="eventName" name="eventName" required>
+      </div>
+      <div class="form-group">
+        <label for="eventDescription">Event Description:</label>
+        <input type="text" id="eventDescription" name="eventDescription" required>
+      </div>
+      <div class="form-group">
+        <label for="eventTitle">Event Title:</label>
+        <input type="text" id="eventTitle" name="eventTitle" required>
+      </div>
+      <div class="form-group">
+        <label for="eventDate">Event Date:</label>
+        <input type="date" id="eventDate" name="eventDate" required>
+      </div>
+      <div class="form-group">
+        <label for="eventCapacity">Capacity:</label>
+        <input type="number" id="eventCapacity" name="eventCapacity" required>
+      </div>
+      <div class="form-group">
+        <label for="registrationDeadline">Event Registration Deadline:</label>
+        <input type="datetime-local" id="registrationDeadline" name="registrationDeadline" required>
+      </div>
+      <div class="form-group">
+        <label for="creationDate">Creation Date of Event:</label>
+        <input type="datetime-local" id="creationDate" name="creationDate" required>
+      </div>
+      <div class="form-group">
+        <label for="eventCategory">Category of Event:</label>
+        <select id="eventCategory" name="eventCategory" required>
+          <option value="">Select category...</option>
+          <option value="Music">Music</option>
+          <option value="Art">Art</option>
+          <option value="Sports">Sports</option>
+          <option value="Business">Business</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit" onclick="window.location.href = 'venue.html';">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
